@@ -1,12 +1,13 @@
 <template>
   <aside :class="[
-      'transition-all duration-300 ease-in-out h-screen fixed left-0 top-0 z-50 shadow-lg',     
+      'transition-all duration-300 ease-in-out h-screen fixed left-0 top-0 z-50 shadow-lg border-r',     
       isCollapsed ? 'w-18' : 'w-64',    
       isMobile ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''
     ]"
     :style="{
       backgroundColor: backgroundColor,
-      color: textColor
+      color: textColor,
+      borderColor: borderColor
     }"
   >
   

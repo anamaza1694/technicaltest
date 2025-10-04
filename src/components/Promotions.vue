@@ -2,7 +2,11 @@
 <template>
 
     <div>
-        <p class="text-[32px] font-bold">Nuestros roductos en promoción</p>
+        <p class="text-[32px] font-bold"
+          :style="{
+                color:primaryColor
+            }"
+        >Nuestros roductos en promoción</p>
     </div>
     <div class="justify-end flex pe-5 pt-5 flex-row gap-2 pb-4 ">              
         <a href="#" class="inline-flex items-center ">

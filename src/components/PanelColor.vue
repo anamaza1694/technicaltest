@@ -29,7 +29,33 @@
         </button>
       </div>
 
-   
+      <div class="mb-6">
+        <label class="block text-md font-medium text-gray-700 mb-3">
+          Puedes elegir cualquier combinación
+        </label>
+        <div class="grid grid-cols-2 gap-3">
+          <button
+            v-for="palette in colorPalettes"
+            :key="palette.name"
+            @click="applyPalette(palette)"
+            class="p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-200 ease-in-out cursor-pointer hover:shadow-md"
+          >
+            <div class="flex items-center space-x-2 mb-2">
+              <div class="w-4 h-4 rounded-full border border-gray-300" :style="{ backgroundColor: palette.primary }"></div>
+              <div class="text-xs font-medium text-gray-700 ">{{ palette.name }}</div>
+            </div>
+            <div class="flex space-x-1">
+              <div class="flex-1 h-6 rounded border border-gray-300" :style="{ backgroundColor: palette.primary }" title="Color Principal"></div>
+              <div class="flex-1 h-6 rounded border border-gray-300" :style="{ backgroundColor: palette.background }" title="Color de Fondo"></div>
+              <div class="flex-1 h-6 rounded border border-gray-300" :style="{ backgroundColor: palette.text }" title="Color de Texto"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      
+      <label class="block text-md font-medium text-gray-700 mb-3">
+        Puedes realizar tu combinación propia
+      </label>
       <div class="mb-6">
         <label class="block text-sm font-medium text-gray-700 mb-3">
           Ámbito de aplicación
@@ -178,7 +204,7 @@ const scopeOptions = [
 
 const primaryColors = [
   
-  { name: 'Azul', value: '#3b82f6' },
+  { name: 'Azul cielo', value: '#3b82f6' },
    { name: 'Azul oscuro', value: '#3A11DF' },
   { name: 'Rojo', value: '#ef4444' },
   { name: 'Rosa intenso', value: '#EC1857' },  
@@ -208,7 +234,63 @@ const textColors = [
  
 ]
 
-// Métodos
+const colorPalettes = ref([
+  {
+    name: 'Azul',
+    primary: '#3b82f6',
+    background: '#ffffff',
+    text: '#1f2937'
+  },
+  {
+    name: 'Verde',
+    primary: '#10b981',
+    background: '#f9fafb',
+    text: '#1f2937'
+  },
+  {
+    name: 'Morado Creativo',
+    primary: '#8b5cf6',
+    background: '#fafafa',
+    text: '#000000'
+  },
+  {
+    name: 'Oscuro Elegante',
+    primary: '#E73244',
+    background: '#1f2937',
+    text: '#ffffff'
+  },
+  {
+    name: 'Rosa Moderno',
+    primary: '#ec4899',
+    background: '#fdf2f8',
+    text: '#4b5563'
+  },
+  {
+    name: 'Oscuro Elegante',
+    primary: '#f59e0b',
+    background: '#1f2937',
+    text: '#ffffff'
+  },
+  {
+    name: 'Rosa Moderno',
+    primary: '#ec4899',
+    background: '#fdf2f8',
+    text: '#4b5563'
+  },
+  {
+    name: 'Azul Claro',
+    primary: '#3A11DF',
+    background: '#EAF5FA',
+    text: '#1f2937'
+  },
+  {
+    name: 'Verde Oliva',
+    primary: '#95C341',
+    background: '#FAFCEE',
+    text: '#1f2937'
+  }
+])
+
 const togglePanel = () => {
   isOpen.value = !isOpen.value
 }
@@ -223,6 +305,12 @@ const getCurrentColor = (type) => {
 
 const setColor = (type, value) => {
   setColorManager(scope.value, type, value)
+}
+
+const applyPalette = (palette) => {
+  setColorManager(scope.value, 'primary', palette.primary)
+  setColorManager(scope.value, 'background', palette.background)
+  setColorManager(scope.value, 'text', palette.text)
 }
 
 const resetScopeColors = () => {

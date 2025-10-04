@@ -87,7 +87,6 @@ import { useNavigation } from '../composables/useNavigation'
 const notificationCount = ref(3)
 const { currentPage } = useNavigation()
 
-// Computed properties
 const userName = computed(() => 'Ana Maza')
 const userInitials = computed(() => userName.value.charAt(0))
 
@@ -96,9 +95,8 @@ const borderColor = computed(() => {
 })
 
 const hoverBackgroundColor = computed(() => {
-  return primaryColor.value + '15'
+  return primaryColor.value + '40'
 })
 
-// SOLO ESTA LÍNEA SE AGREGÓ
 defineEmits(['toggle-sidebar'])
 </script>
