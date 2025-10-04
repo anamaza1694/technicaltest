@@ -163,7 +163,6 @@
 <script setup>
 import { ref } from 'vue'
 import { useColorManager } from '../composables/useColors'
-const { primaryColor, backgroundColor, textColor } = useColorManager('content')
 const { colorState, getEffectiveColor, setColor: setColorManager, resetScopeColors: resetScopeManager, resetAllColors: resetAllManager } = useColorManager()
 
 const isOpen = ref(false)

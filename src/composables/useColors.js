@@ -29,20 +29,15 @@ const defaultColors = {
   },
 }
 
-
 const colorState = reactive(JSON.parse(JSON.stringify(defaultColors)))
-
-
 const colorUpdateTrigger = ref(0)
-
 
 function loadSavedColors() {
   if (typeof window !== 'undefined') {
     const savedColors = localStorage.getItem('appColors')
     if (savedColors) {
       try {
-        const colors = JSON.parse(savedColors)      
-        
+        const colors = JSON.parse(savedColors)         
         Object.keys(colors).forEach(scopeName => {
           if (colorState[scopeName]) {
             Object.keys(colors[scopeName]).forEach(colorType => {
@@ -59,14 +54,14 @@ function loadSavedColors() {
   }
 }
 
-// Guardar colores
+
 function saveColors() {
   if (typeof window !== 'undefined') {
     localStorage.setItem('appColors', JSON.stringify(colorState))
   }
 }
 
-// CARGAR COLORES INMEDIATAMENTE
+
 loadSavedColors()
 
 export function useColorManager() {
@@ -85,7 +80,7 @@ export function useColorManager() {
   }
 
   const resetScopeColors = (scope) => {
-    // Usar los valores por defecto correctos para cada ámbito
+   
     const defaultScopeColors = JSON.parse(JSON.stringify(defaultColors[scope]))
     Object.keys(colorState[scope]).forEach(key => {
       colorState[scope][key] = defaultScopeColors[key]
@@ -95,7 +90,7 @@ export function useColorManager() {
   }
 
   const resetAllColors = () => {
-    // Restaurar TODOS los valores por defecto
+   
     const freshColors = JSON.parse(JSON.stringify(defaultColors))
     Object.keys(freshColors).forEach(scopeName => {
       Object.keys(freshColors[scopeName]).forEach(colorType => {
@@ -123,14 +118,14 @@ export function useScopeColors(scope) {
   const backgroundColor = ref(getEffectiveColor(scope, 'background'))
   const textColor = ref(getEffectiveColor(scope, 'text'))
 
-  // Watcher que reacciona a cambios en el estado global
+
   watch(colorUpdateTrigger, () => {
     primaryColor.value = getEffectiveColor(scope, 'primary')
     backgroundColor.value = getEffectiveColor(scope, 'background')
     textColor.value = getEffectiveColor(scope, 'text')
   })
 
-  // También observar cambios directos en colorState
+
   watch(
     () => colorState[scope],
     () => {
