@@ -1,9 +1,7 @@
 <template>
   <aside :class="[
-      'transition-all duration-300 ease-in-out h-screen fixed left-0 top-0 z-50 shadow-lg',
-      // Comportamiento normal en desktop
-      isCollapsed ? 'w-18' : 'w-64',
-      // Comportamiento en móvil - posición absoluta sobre el contenido
+      'transition-all duration-300 ease-in-out h-screen fixed left-0 top-0 z-50 shadow-lg',     
+      isCollapsed ? 'w-18' : 'w-64',    
       isMobile ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : ''
     ]"
     :style="{
@@ -11,7 +9,7 @@
       color: textColor
     }"
   >
-    <!-- Logo y botón toggle - EXACTAMENTE COMO LO TENÍAS -->
+  
     <div 
       class="p-4 flex items-center justify-between"
       :style="{ borderColor: borderColor }"
@@ -44,8 +42,7 @@
         </svg>
       </button>
     </div>
-
-    <!-- Menú de navegación - EXACTAMENTE COMO LO TENÍAS -->
+    
     <nav class="mt-6">
       <ul class="space-y-2 px-2">
         <li v-for="item in menuItems" :key="item.name">
@@ -60,7 +57,7 @@
             @mouseleave="isHovered = null"
             @click="menuClick(item.name)"
           >
-            <!-- Ícono SVG con color dinámico -->
+          
             <svg 
               class="w-8 h-8 transition-colors" 
               viewBox="0 -960 960 960"
@@ -85,7 +82,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useScopeColors } from '../composables/useColors'
 import { useNavigation } from '../composables/useNavigation'
 
-// Props
+
 defineProps({
   sidebarOpen: {
     type: Boolean,

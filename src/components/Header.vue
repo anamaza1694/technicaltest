@@ -9,7 +9,7 @@
     <div class="flex items-center justify-between p-4">
      
       <div class="flex items-center space-x-4">
-        <!-- SOLO ESTE BOTÓN SE AGREGÓ -->
+       
         <button 
           @click="$emit('toggle-sidebar')"
           class="p-2 rounded-lg transition-colors md:hidden"
@@ -22,12 +22,11 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <!-- FIN DEL BOTÓN AGREGADO -->
-        
+      
         <h2 class="text-lg font-bold pl-4" :style="{ color: textColor }">{{ currentPage }}</h2>
       </div>
 
-      <div class="max-w-xl mx-auto w-full md:block hidden">  
+      <div class="max-w-xl mx-auto w-full md:block hidden md:w-1/2">  
         <form >   
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Buscar</label>
             <div class="relative">

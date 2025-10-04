@@ -41,8 +41,7 @@ function loadSavedColors() {
     const savedColors = localStorage.getItem('appColors')
     if (savedColors) {
       try {
-        const colors = JSON.parse(savedColors)
-        console.log('Cargando colores guardados:', colors)
+        const colors = JSON.parse(savedColors)      
         
         Object.keys(colors).forEach(scopeName => {
           if (colorState[scopeName]) {

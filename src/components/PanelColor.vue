@@ -1,6 +1,6 @@
 <template>
   <div class="fixed top-1/2 right-0 transform -translate-y-1/2 z-50">
-    <!-- Botón toggle -->
+ 
     <button
       @click="togglePanel"
       class="bg-blue-600 text-white p-3 rounded-tl-lg shadow-lg hover:bg-blue-700 transition-all duration-300 ease-in-out "
@@ -16,7 +16,7 @@
       class="bg-white w-96 p-6 rounded-bl-lg shadow-xl border border-gray-200 max-h-[90vh] overflow-y-auto transition-all duration-300 ease-in-out transform"
       :class="isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'"
     >
-      <!-- El resto del contenido del panel se mantiene igual -->
+
       <div class="flex items-center justify-between mb-6">
         <h3 class="text-lg font-semibold text-gray-800">Personalizar Colores</h3>
         <button
@@ -29,7 +29,7 @@
         </button>
       </div>
 
-      <!-- Selector de ámbito -->
+   
       <div class="mb-6">
         <label class="block text-sm font-medium text-gray-700 mb-3">
           Ámbito de aplicación
@@ -50,8 +50,7 @@
           </button>
         </div>
       </div>
-
-      <!-- Selectores de color... (mantener igual) -->
+    
       <div class="mb-6">
         <label class="block text-sm font-medium text-gray-700 mb-3">
           Color Principal
@@ -136,7 +135,7 @@
         </div>
       </div>
 
-      <!-- Botones de acción -->
+    
       <div class="flex space-x-3">
         <button
           @click="resetScopeColors"

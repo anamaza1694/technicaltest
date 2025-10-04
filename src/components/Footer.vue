@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-4 mt-auto border border-t border-l-0"
+  <footer class="py-4 mt-auto border border-t-2 border-l-0"
     :style="{
       backgroundColor: backgroundColor,
       borderColor: borderColor
@@ -7,7 +7,7 @@
   >
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-between items-center">
-        <!-- Información de copyright -->
+      
         <div class="mb-2 md:mb-0">
           <p class="text-sm text-gray-300" 
            :style="{           

@@ -2,17 +2,17 @@
     <div class="p-2 ">
         <div class="flex md:flex-row flex-col">
             <div class="flex flex-col w-full md:w-1/2">
-                <p class=" text-[48px] font-bold leading-[48px] text-gray-700"
+                <p class="lg:text-[48px] font-bold lg:leading-[48px] text-gray-700 text-[32px] leading-[40px] "
                     :style="{
                         color: textColor,                        
                     }"
                 >El lugar donde los buenos momentos saben mejor</p>      
-                <div class="pt-4 md:w-1/2 w-full">
+                <div class="pt-4 md:w-2/3 lg:w-1/2 w-full">
                      <p class="text-[14px] text-gray-500 ">Sabores intensos, texturas perfectas y una presentación que enamora. 
                         La elección ideal para quienes buscan lo mejor</p>      
                 </div>
                
-                <div class="w-full md:w-1/3 pt-12">
+                <div class="w-full md:w-1/2 lg:w-1/3 pt-12">
                      <button class="text-white p-2  shadow-lg rounded-full w-full  "
                         :style="{
                             backgroundColor: primaryColor,        
@@ -23,13 +23,13 @@
                      </button>  
                 </div>                       
             </div>
-            <div class="md:w-1/2 w-full relative flex md:flex-row flex-col pt-2 ">    
+            <div class="md:w-1/2  w-full relative flex md:flex-row flex-col pt-2 ">    
                 <div class="right-0 absolute md:z-20 z-10  border-0">
-                    <img src="/amburgueza.png" class="rounded-full w-80 h-80 shadow-2xl"></img>
+                    <img src="/amburgueza.png" class="rounded-full w-80 h-80 lg:w-80 lg:h-80 shadow-2xl md:w-60 md:h-60 "></img>
                 </div>    
 
-                <!-- Contenedor movido a la derecha y parte superior -->
-                <div class="absolute md:right-50 md:top-32 top-80 md:z-10 z-20 p-6 md:w-2/3 w-full">       
+            
+                <div class="absolute lg:right-50 md:right-20 md:top-32 top-80 md:z-10 z-20 p-6 lg:w-2/3 w-full">       
                     <div 
                         class="absolute inset-0 rounded-lg"
                         :style="{
@@ -45,7 +45,7 @@
                         </svg>
                         <div class="flex flex-col gap-2 ">                               
                             <p class="text-gray-900 text-[14px] font-bold">Fast Delívery</p>
-                            <p class="text-gray-600 text-[12px] md:w-2/3">Te llevamos a cualquier zona del país</p>
+                            <p class="text-gray-600 text-[12px] md:w-2/3 w-full">Te llevamos a cualquier zona del país</p>
 
                         </div>   
                     </div>
@@ -55,7 +55,7 @@
                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M320-680q-50 0-85-35t-35-85q0-50 35-85t85-35q38 0 69 22.5t45 57.5h326v80h-40v80h-80v-80H434q-14 35-45 57.5T320-680Zm0-80q17 0 28.5-11.5T360-800q0-17-11.5-28.5T320-840q-17 0-28.5 11.5T280-800q0 17 11.5 28.5T320-760Zm40 500q17 0 28.5-11.5T400-300q0-17-11.5-28.5T360-340q-17 0-28.5 11.5T320-300q0 17 11.5 28.5T360-260Zm240 0q17 0 28.5-11.5T640-300q0-17-11.5-28.5T600-340q-17 0-28.5 11.5T560-300q0 17 11.5 28.5T600-260ZM200-376l66-192q5-14 16.5-23t25.5-9h344q14 0 25.5 9t16.5 23l66 192v264q0 14-9 23t-23 9h-16q-14 0-23-9t-9-23v-48H280v48q0 14-9 23t-23 9h-16q-14 0-23-9t-9-23v-264Zm106-64h348l-28-80H334l-28 80Zm-26 80v120-120Zm0 120h400v-120H280v120Z"/></svg>
                         <div class="flex flex-col gap-2 ">                               
                             <p class="text-gray-900 text-[14px] font-bold">Pick up</p>
-                            <p class="text-gray-600 text-[12px] md:w-2/3">Si lo deseas tambien puedes retirar en nuestras tiendas</p>
+                            <p class="text-gray-600 text-[12px] md:w-2/3 w-full">Si lo deseas tambien puedes retirar en nuestras tiendas</p>
                         </div>   
                     </div>
                 </div>

@@ -10,7 +10,7 @@
             </div>           
         </a>
     </div>
-    <div class="grid xl:grid-cols-3 lg:grid-cols-2 grid-col-1 gap-4">
+    <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-col-1 gap-4">
          <div v-for="prod in produts">
             <DetailProductPanel :product="prod"></DetailProductPanel>
         </div>

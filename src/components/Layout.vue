@@ -4,7 +4,7 @@
       backgroundColor: backgroundColor,
     }"
   >
-    <!-- Overlay para móvil -->
+
     <div 
       v-if="isMobile && sidebarOpen" 
       class="fixed inset-0 bg-black opacity-20 z-40 md:hidden"
@@ -14,18 +14,18 @@
     <!-- Sidebar -->
     <Sidebar ref="sidebarRef" :sidebar-open="sidebarOpen" :is-mobile="isMobile" @close="sidebarOpen = false" />
     
-    <!-- Contenido principal - SIN márgenes en móvil -->
+
     <div class="flex-1 flex flex-col w-full transition-all duration-300" 
          :class="isMobile ? 'ml-0' : sidebarWidthClass">
       <!-- Header -->
       <Header @toggle-sidebar="toggleSidebar" />
       
       <!-- Contenido -->
-      <main class="flex-1 p-6 overflow-auto">
-        <div class="max-w-7xl mx-auto">
-          <slot />
-        </div>
-      </main>
+    <main class="flex-1 p-4 md:p-6 overflow-hidden">
+      <div class="max-w-7xl mx-auto w-full h-full overflow-y-auto">
+        <slot />
+      </div>
+    </main>
       
       <!-- Footer -->
       <Footer />
