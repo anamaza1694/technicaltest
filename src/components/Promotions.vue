@@ -37,8 +37,8 @@ import { useScopeColors } from '../composables/useColors'
 const { primaryColor, textColor } = useScopeColors('content')
  const produts=ref([
     {id:1, title:'Pizza margarita', price:20.5, valoration:'5', image:'/pizza.jpeg', description: 'Deliciosa pizza margarita .'},
-    {id:2, title:'Ensalada cesar', price:20.5, valoration:'5', image:'/amburgueza.png',description: 'Hamburguesa clásica con carne jugosa,.'},
-    {id:3, title:'Pizza margarita', price:20.5, valoration:'5', image:'/ensalada.jpeg', description: 'Ensalada César clásica con lechuga romana, crutones, '},
+    {id:2, title:'Hamburguesa clásica', price:20.5, valoration:'5', image:'/amburgueza.png',description: 'Hamburguesa clásica con carne jugosa,.'},
+    {id:3, title:'Ensalada cesar', price:20.5, valoration:'5', image:'/ensalada.jpeg', description: 'Ensalada César clásica con lechuga romana, crutones, '},
    
  ])
 
